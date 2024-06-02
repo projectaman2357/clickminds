@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #5cb85c;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Education Details</h2>
+        <form action="/submit-education" method="POST">
+            <div class="form-group">
+                <label for="highestQualification">Highest Qualification</label>
+                <input type="text" id="highestQualification" name="highestQualification" required>
+            </div>
+            <div class="form-group">
+                <label for="institution">Institution</label>
+                <input type="text" id="institution" name="institution" required>
+            </div>
+            <div class="form-group">
+                <label for="passingYear">Year of Passing</label>
+                <input type="number" id="passingYear" name="passingYear" required>
+            </div>
+            <div class="form-group">
+                <label for="percentage">Percentage/CGPA</label>
+                <input type="text" id="percentage" name="percentage" required>
+            </div>
+            <div class="form-group">
+                <label for="specialization">Specialization</label>
+                <input type="text" id="specialization" name="specialization" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

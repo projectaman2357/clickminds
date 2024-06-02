@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Sidebar</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    /* Custom CSS for sidebar */
+    .w3-sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .w3-sidebar a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .w3-sidebar a:hover {
+      color: #f1f1f1;
+    }
+
+    .w3-sidebar .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    /* Page content styling */
+    .w3-teal {
+      background-color: #009688 !important;
+      padding: 16px;
+      text-align: left;
+    }
+
+    .main-content {
+      transition: margin-left .5s;
+      padding: 16px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .w3-sidebar {padding-top: 15px;}
+      .w3-sidebar a {font-size: 18px;}
+    }
+    
+  </style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-button w3-large closebtn">Close &times;</button>
+  <a href="personaldetails.htm" class="w3-bar-item w3-button">Personal details</a>
+  <a href="educationdetails.htm" class="w3-bar-item w3-button">Educational details</a>
+  <a href="contactdetails.htm" class="w3-bar-item w3-button">Contact details</a>
+</div>
+
+<!-- Page Content -->
+<div class="w3-teal">
+  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+  <div class="w3-container">
+    <h1>Welcome to Clickmind solution</h1>
+  </div>
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.querySelector('.main-content').style.marginLeft = "250px";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.querySelector('.main-content').style.marginLeft = "0";
+}
+</script>
+     
+</body>
+</html>
